@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background: #003b6f;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #f8fafc;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: #5E68AD;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background:#003b6f;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-text {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Education Section */
+#education h2 {
+    margin-bottom: 1rem; 
+}
+
+.education-text {
+    width: 100%;
+    background: white;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 7px 7px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 2px solid #ddd;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.card-area {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 80px;
+    height: 120px;
+    background-color: #003b6f; /* Div rengi */
+    position: relative;
+    transform: skewY(-5deg);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover {
+    transform: skewY(-5deg) translateY(-5px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.card-title {
+    color: #f8fafc; 
+    font-size: 12px;
+    transform: skewY(5deg) rotate(90deg);
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.div-label, .span-label {
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.div-label {
+    background-color: #003b6f;
+    color: white;
+}
+.span-label {
+    background-color: #f8fafc;
+    border: 1px solid #ddd;
+}
+
+
+
+.hobby-container {
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px; /* İstediğiniz boşluğu ayarlayın (10px, 30px vb.) */
+}
+
+.hobby-text {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex: 1; /* Eşit genişlik + gap ile uyumlu */
+}
+
+/* .hobby-text p içindeki margin-right ve width'i kaldırın */
+.hobby-text p {
+    margin-bottom: 1rem;
+}
+
+/* Quote Section */
+#quotes {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card h3 {
+    color: #5E68AD;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-link {
+    background: #003B6F;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #1E293B;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .skills-grid, .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
